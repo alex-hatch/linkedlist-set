@@ -86,15 +86,7 @@ public class LinkedList<T extends Comparable<T>> {
      * @return Whether or not the container contains s
      */
     public boolean contains(T item) {
-        ListNode<T> runner = dummyHead.next;
-        while (runner != null) {
-            assert runner.val != null;
-            if (runner.val.equals(item)) {
-                return true;
-            }
-            runner = runner.next;
-        }
-        return false;
+        return (getItem(item) != null);
     }
 
     /**
